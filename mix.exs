@@ -8,16 +8,30 @@ defmodule Parseq.MixProject do
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      package: package(),
+      description: description(),
       elixirc_options: [
         warnings_as_errors: true
       ],
     ]
   end
 
+  def package do
+    [
+      maintainers: ["Daniel Sobol"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/mynameisdaniil/parseq"},
+    ]
+  end
+
+  def description do
+    "Parallel and sequentual function composition for Elixir"
+  end
+
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: []
     ]
   end
 
